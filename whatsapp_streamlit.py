@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import pywhatkit
+#import pywhatkit
 import time
 import tempfile
 
@@ -69,7 +69,7 @@ if st.button("Send WhatsApp Messages") and not st.session_state.msgs_sent:
             date = str(row['Date'])
             message = message_template.format(name=name, date=date)
             try:
-                pywhatkit.sendwhatmsg_instantly(mobile, message)
+                #pywhatkit.sendwhatmsg_instantly(mobile, message)
                 time.sleep(5)
             except Exception as e:
                 st.error(f"Error sending to {mobile}: {e}")
@@ -80,4 +80,5 @@ if st.button("Send WhatsApp Messages") and not st.session_state.msgs_sent:
     
 
     
+
 
